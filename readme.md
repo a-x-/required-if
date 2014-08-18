@@ -32,7 +32,8 @@ Attention on `data-required="if #input-delivery-via-ems has [checked]"` attribut
 
 # Dependencies
 
-* [a-x-/object-assign](https://github.com/a-x-/object-assign) — ES6 Object.assign for browsers (fork).
+There are noting.
+<!--* [a-x-/object-assign](https://github.com/a-x-/object-assign) — ES6 Object.assign for browsers (fork).-->
 
 # Status
 
