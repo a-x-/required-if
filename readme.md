@@ -25,10 +25,10 @@ I want in this sitation have the 4 fields are required if «delivery type» is a
 </label>
 
 <input type="text" name="address[city]" placeholder="Город" class="ems-calc"
-data-required="if #input-delivery-via-ems" >
+data-required="if #input-delivery-via-ems has [checked]" >
 ```
 
-Attention on `data-required="if #input-delivery-via-ems"` attribute.
+Attention on `data-required="if #input-delivery-via-ems has [checked]"` attribute.
 
 # Status
 
