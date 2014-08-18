@@ -45,9 +45,12 @@ This is under active development stage **(not production ready)**.
 
 
 # Demo
+See [GIF animation](/demo.gif)
+
 ![Step 1](/demo-step1.png)
 
 ![Step 2](/demo-step2.png)
+
 
 # License
 
