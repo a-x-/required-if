@@ -11,6 +11,17 @@ For example: there are 2-rirectional radio switcher (Delivery type: ⑴pickup; �
 
 I want in this sitation have the 4 fields are required if «delivery type» is a «EMS post».
 
+```html
+<label><input type="radio" name="delivery_via" value="pickup">Pickup</label>
+
+<label><input type="radio" name="delivery_via" value="ems" id="input-delivery-via-ems" checked>EMS post</label>
+
+<input type="text" name="address[city]" placeholder="Город" class="ems-calc"
+data-required="if #input-delivery-via-ems" >
+```
+
+Attention on `data-required="if #input-delivery-via-ems"` attribute.
+
 # Status
 
 This is under active development stage (not production ready).
