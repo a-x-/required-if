@@ -16,3 +16,12 @@ I want in this sitation have the 4 fields are required if «delivery type» is a
 This is under active development stage (not production ready).
 
 # License
+
+All under MIT license.
+
+# Contribution
+
+You're welcome!
+I watch github issues and mailbox (me@invntrm.ru).
+
+English typo-fixes are welcome too.
