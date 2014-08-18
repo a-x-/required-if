@@ -30,6 +30,10 @@ data-required="if #input-delivery-via-ems has [checked]" >
 
 Attention on `data-required="if #input-delivery-via-ems has [checked]"` attribute.
 
+# Dependencies
+
+* [a-x-/object-assign](https://github.com/a-x-/object-assign) — ES6 Object.assign for browsers (fork).
+
 # Status
 
 This is under active development stage **(not production ready)**.
