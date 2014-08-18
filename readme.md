@@ -1,11 +1,11 @@
 // Excuxe my beginner's English.
 
-# Requider-if
+# Requider-If
 
 The HTML form elements properties improve.
-Idead: make conditional dynamic required elements instead of static required elements only.
+Idea: make conditional dynamic required elements instead of static required elements only.
 
-For example: there are 2-rirectional radio switcher (Delivery type: 1) pickup; 2) EMS post) and 4 fields for 2th radio.
+For example: there are 2-rirectional radio switcher (Delivery type: ⑴pickup; ⑵EMS post) and 4 fields for 2th radio.
 
 ![Form example](/required-if-example.png)
 
