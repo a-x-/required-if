@@ -42,7 +42,7 @@ This is under active development stage **(not production ready)**.
 
 | **Idea** | Alpha | Beta | RC | Production |
 |:--------:|:-----:|:----:|:--:|:----------:|
-|  **Ok**  |Pending|  —   |  — |      —     |
+|  **Ok**  |v.0.1.x|  —   |  — |      —     |
 
 # License
 
