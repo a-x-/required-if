@@ -34,6 +34,11 @@ Attention on `data-required="if #input-delivery-via-ems"` attribute.
 
 This is under active development stage **(not production ready)**.
 
+
+| **Idea** | Alpha | Beta | RC | Production |
+|:--------:|:-----:|:----:|:--:|:----------:|
+|  **Ok**  |Pending|  —   |  — |      —     |
+
 # License
 
 All under MIT license.
