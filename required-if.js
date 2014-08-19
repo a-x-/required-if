@@ -19,40 +19,33 @@
     //
     // Initial targets traversal
     targets.forEach(function (target, i) {
-        var descriptor = target.dataset.required.match(/^if\s+(.*)\s+has\s+(.*)$/i),
-            factorElement,
-            factorElementSelector,
-            condition;
-        if (descriptor === null) {
-            return;
-        }
-        factorElementSelector = descriptor[1];
-        factorElement = document.querySelector(factorElementSelector);
-        condition = descriptor[2];
-        //
         // Mark target for futher reasons
-        target.classList.add('requiredif-target');
-        target.dataset.requiredifTargetId = i + 1;
-        //
-        // Parse [attribute] syntax
-        (function () {
-            console.log('Parse [attribute] syntax');
-            var conditionDescriptor = condition.match(/^\[([a-z\-]+)\]$/i),
-                conditionAttribute;
-            if (conditionDescriptor !== null) {
-                conditionAttribute = conditionDescriptor[1];
+        target.classList.add('requiredif-target');target.dataset.requiredifTargetId = i + 1;
+        var declarator = target.dataset.required;
+        declarator.split(/\s*,\s*/).forEach(function (declaratorBranch) {
+            //
+            // Parse `"if" <selector> "[" <attribute> "]"` declarator
+            (function () {
+                console.log('Parse [attribute] syntax');
+                var descriptor = declaratorBranch.match(/^if\s+(.*)\s*\[([a-z\-]+)\]$/i);
+                if (descriptor === null || !descriptor[1] || !descriptor[2]) {
+                    return false;
+                }
+                var factorElementSelector = descriptor[1],
+                    factorElement = document.querySelector(factorElementSelector);
+                var conditionAttribute = descriptor[2];
                 //
                 // Store current condition value
                 target.required
                     = assignObjectIfUndefined(conditionMap, target.dataset.requiredifTargetId)[factorElementSelector]
-                    = !!factorElement[conditionAttribute];
+                    = !!factorElement[conditionAttribute] && !factorElement.hasAttribute('disabled');
                 console.log(factorElementSelector, factorElement, factorElement[conditionAttribute], conditionAttribute, i + 1);
                 // Add listener to factorElement
                 if(factorElement.tagName.toLowerCase() === 'input' && factorElement.type.toLowerCase() === 'radio') {
                     document.querySelectorAll('[name="'+factorElement.name+'"]').addEventListener('change', function (event) {
                         // Attention!: Lisp pasta...
                         if (
-                                // factorElement has specified attribute
+                        // factorElement has specified attribute
                             (factorElement[conditionAttribute])
                                 === //
                                 // previous condition value is false
@@ -60,7 +53,7 @@
                             ) {
                             target.required
                                 = conditionMap[target.dataset.requiredifTargetId][factorElementSelector]
-                                = (factorElement[conditionAttribute]);
+                                = (!!factorElement[conditionAttribute] && !factorElement.hasAttribute('disabled'));
                         }
                     });
                 }
@@ -71,9 +64,11 @@
                     throw 'unknown element type';
                 }
                 return true;
-            }
-            return false;
-        }());
+            }())
+            ||(function(){
+                // another declarator processor
+            }());
+        });
     });
     console.log({conditionMap:conditionMap, targets:targets});
 }());
