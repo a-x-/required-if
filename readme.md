@@ -37,6 +37,8 @@ There are noting.
 
 # Status
 
+I uses this library in my own projects already.
+
 | **Idea** | Alpha | Beta | RC | Production |
 |:--------:|:-----:|:----:|:--:|:----------:|
 |  **Ok**  |v.0.1.x|  —   |  — |      —     |
