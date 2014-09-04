@@ -25,10 +25,10 @@ I want in this sitation have the 4 fields are required if «delivery type» is a
 </label>
 
 <input type="text" name="address[city]" placeholder="Город" class="ems-calc"
-data-required="if #input-delivery-via-ems has [checked]" >
+data-required="if #input-delivery-via-ems [checked]" >
 ```
 
-Attention on `data-required="if #input-delivery-via-ems has [checked]"` attribute.
+Attention on `data-required="if #input-delivery-via-ems [checked]"` attribute.
 
 # Dependencies
 
@@ -36,8 +36,6 @@ There are noting.
 <!--* [a-x-/object-assign](https://github.com/a-x-/object-assign) — ES6 Object.assign for browsers (fork).-->
 
 # Status
-
-This is under active development stage **(not production ready)**.
 
 | **Idea** | Alpha | Beta | RC | Production |
 |:--------:|:-----:|:----:|:--:|:----------:|
