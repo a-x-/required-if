@@ -45,7 +45,7 @@ I uses this library in my own projects already.
 
 
 # Demo
-See [GIF animation](/demo.gif)
+See [GIF animation](https://raw.githubusercontent.com/a-x-/required-if/master/demo.gif)
 
 ![Step 1](/demo-step1.png)
 
