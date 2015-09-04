@@ -1,6 +1,6 @@
 // Excuxe my beginner's English.
 
-# Requider-If
+# Required-If
 
 The HTML form elements properties improve.
 Idea: make conditional dynamic required elements instead of static required elements only.
